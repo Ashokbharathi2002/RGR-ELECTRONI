@@ -49,7 +49,7 @@ function login() {
     var password = document.getElementById("loginPassword").value;
 
     var url = "https://script.google.com/macros/s/AKfycbwWQm1h5NMG8x66xaEunP9jnZe87MysByM52gPA8DFPqgHXBil45y4EXccLd40XKw8M/exec";
-    var params = "?user_id=" + encodeURIComponent(userId);
+    var params = "?user_id=" + userId;
     var fetchUrl = url + params;
 
     // validate user id and password
@@ -57,13 +57,19 @@ function login() {
         .then(response => response.json())
         .then(data => {
 
+            console.log("Login Data:", data); // Debug log
+
             var validUserId = data[0].user_id;
             var validPassword = data[0].password;
             var active = data[0].Statas;
 
+            // console.log("Valid User ID:", validUserId); // Debug log
+            // console.log("Valid Password:", validPassword); // Debug log
+            // console.log("Account Status:", active); // Debug log
+
             if (userId == validUserId && password == validPassword) {
-                if (active == "Active") {
-                    alertbox.render({
+
+                alertbox.render({
                         alertIcon: 'success',
                         title: 'Thank You!',
                         message: 'Login sucess.',
@@ -74,25 +80,38 @@ function login() {
                     setTimeout(() => {
                         window.location.href = "dashboard.html";
                     }, 2000);
-                }
-                if (active == "Pending") {
-                    alertbox.render({
-                        alertIcon: 'error',
-                        title: 'Thank You!',
-                        message: 'Your account is not active. Please contact the administrator.',
-                        btnTitle: 'Ok',
-                        border: true
-                    });
-                }
-                else if (active == "Inactive") {
-                    alertbox.render({
-                        alertIcon: 'error',
-                        title: 'Thank You!',
-                        message: 'Your account is inactive. Please contact the administrator.',
-                        btnTitle: 'Ok',
-                        border: true
-                    });
-                }
+
+                // if (active == "Active") {
+                //     alertbox.render({
+                //         alertIcon: 'success',
+                //         title: 'Thank You!',
+                //         message: 'Login sucess.',
+                //         btnTitle: 'Ok',
+                //         border: true
+                //     });
+                //     // delay to dashboard
+                //     setTimeout(() => {
+                //         window.location.href = "dashboard.html";
+                //     }, 2000);
+                // }
+                // if (active == "Pending") {
+                //     alertbox.render({
+                //         alertIcon: 'error',
+                //         title: 'Thank You!',
+                //         message: 'Your account is not active. Please contact the administrator.',
+                //         btnTitle: 'Ok',
+                //         border: true
+                //     });
+                // }
+                // else if (active == "Inactive") {
+                //     alertbox.render({
+                //         alertIcon: 'error',
+                //         title: 'Thank You!',
+                //         message: 'Your account is inactive. Please contact the administrator.',
+                //         btnTitle: 'Ok',
+                //         border: true
+                //     });
+                // }
             }
             else {
                 alertbox.render({
