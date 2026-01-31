@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -30,18 +30,13 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <script>
-        // Disable right click on the page
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        // Disable right click on specific element
-        const elm = document.getElementById('appointment');
-        elm.addEventListener('contextmenu', event => event.preventDefault());
-        elm.addEventListener('click', Fun_call);
-    </script>
+
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -65,8 +60,8 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="#AboutStart" class="nav-item nav-link">About</a>
                         <a href="#Contact" class="nav-item nav-link">Contact</a>
-                        <a href="#" class="nav-item nav-link" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="logintodash()">Login</a>
-                        <a href="/Dashboard.html" class="nav-item nav-link" id="dashboardlink" style="display: none;" >dashboard</a>
+                        <a href="/appoinment.html" class="nav-item nav-link">Appoinment</a>
+                        <a href="/lofin.html" class="nav-item nav-link" class="btn btn-primary">Login</a>
                     </div>
                 </div>
             </nav>
@@ -78,17 +73,22 @@
         <div class="container-fluid header bg-white p-0">
             <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
                 <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary" style="text-transform: uppercase;">tv technician</span> To Support Your Family</h1>
-                    <p class="animated fadeIn mb-4 pb-2">a person employed to look after technical equipment or do practical work in a laboratory.</p>
-                    <a href="#Services" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+                    <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary">TV Technician</span> To
+                        Support Your Family</h1>
+                    <p class="animated fadeIn mb-4 pb-2 lead text-muted">A dedicated professional employed to maintain
+                        technical equipment and ensure your entertainment never stops.</p>
+                    <div class="d-flex gap-3 animated fadeIn">
+                        <a href="#Services" class="btn btn-primary py-3 px-5">Get Started</a>
+                        <a href="#Contact" class="btn btn-outline-primary py-3 px-5">Contact Us</a>
+                    </div>
                 </div>
                 <div class="col-md-6 animated fadeIn">
                     <div class="owl-carousel header-carousel">
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="img/RGRPAGE1.gif" alt="">
+                            <img class="img-fluid" src="img/RGRPAGE1.gif" alt="TV Repair Service">
                         </div>
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="img/RGRpage2.gif" alt="">
+                            <img class="img-fluid" src="img/RGRpage2.gif" alt="Electronics Repair">
                         </div>
                     </div>
                 </div>
@@ -108,24 +108,34 @@
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <h1 class="mb-4">We’re not just technicians; we’re TV artists.</h1>
                         <p class="mb-4">
-                            Gurunathan Rajaram, a diligent and dedicated learner, recently achieved the prestigious Smart TV Repair Technician certification. His commitment to mastering the intricacies of television repair has been commendable.
-                            Throughout the course, Gurunathan demonstrated exceptional problem-solving skills, a keen eye for detail, and a passion for electronics. His certificate, awarded in January 2024, stands as a testament to his expertise in diagnosing and fixing smart TV issues.
-                            As he embarks on his professional journey, we have no doubt that Gurunathan will continue to excel in the field, providing top-notch service to customers and contributing to the ever-evolving world of technology.
+                            Gurunathan Rajaram, a diligent and dedicated learner, recently achieved the prestigious
+                            Smart TV Repair Technician certification. His commitment to mastering the intricacies of
+                            television repair has been commendable.
+                            Throughout the course, Gurunathan demonstrated exceptional problem-solving skills, a keen
+                            eye for detail, and a passion for electronics. His certificate, awarded in January 2024,
+                            stands as a testament to his expertise in diagnosing and fixing smart TV issues.
+                            As he embarks on his professional journey, we have no doubt that Gurunathan will continue to
+                            excel in the field, providing top-notch service to customers and contributing to the
+                            ever-evolving world of technology.
                         </p>
-                        <p class="mb-4">They are adept at diagnosing technical issues and providing practical solutions. So, the next time you encounter a lab technician, appreciate their behind-the-scenes contributions to scientific progress</p>
+                        <p class="mb-4">They are adept at diagnosing technical issues and providing practical solutions.
+                            So, the next time you encounter a lab technician, appreciate their behind-the-scenes
+                            contributions to scientific progress</p>
 
                         <a onclick="viewcertificate()" class="btn btn-primary py-3 px-5 mt-3">View certificate</a>
                         <div id="certificate" style="display: none;">
-                            <img src="img/guru certificate .jpg" class="img-fluid shadow-lg p-3 mb-5 bg-body rounded "  alt="...">
-                            <button onclick="clocecertificate()" type="button" class="btn-close" aria-label="Close"></button>
+                            <img src="img/guru certificate .jpg" class="img-fluid shadow-lg p-3 mb-5 bg-body rounded "
+                                alt="...">
+                            <button onclick="clocecertificate()" type="button" class="btn-close"
+                                aria-label="Close"></button>
                         </div>
                         <script>
 
-                            function viewcertificate(){
+                            function viewcertificate() {
                                 document.getElementById("certificate").style.display = "block";
                             }
 
-                            function clocecertificate(){
+                            function clocecertificate() {
                                 document.getElementById("certificate").style.display = "none";
                             }
 
@@ -137,115 +147,144 @@
         <!-- About End -->
 
 
-        <!-- Property List Start -->
+        <!-- Services Section Start -->
         <div class="container-xxl py-5" id="Services">
             <div class="container">
-                <div class="row g-0 gx-5 align-items-end">
-                    <div class="col-lg-6">
-                        <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                            <h1 class="mb-3">Services</h1> 
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Services</h1>
+                    <p class="text-muted">We provide comprehensive repair services for all types of televisions,
+                        ensuring quality and reliability.</p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-feature text-center p-3 rounded bg-light">
+                            <i class="bi bi-geo-alt-fill text-primary fa-2x mb-2"></i>
+                            <h5>Door-Step Service</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-feature text-center p-3 rounded bg-light">
+                            <i class="bi bi-truck text-primary fa-2x mb-2"></i>
+                            <h5>Free Pickup</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-feature text-center p-3 rounded bg-light">
+                            <i class="bi bi-clock-history text-primary fa-2x mb-2"></i>
+                            <h5>On-time Delivery</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-feature text-center p-3 rounded bg-light">
+                            <i class="bi bi-shield-check text-primary fa-2x mb-2"></i>
+                            <h5>Safe & Secure</h5>
                         </div>
                     </div>
                 </div>
-                <!--grid start-->
 
-                <div class="container" style="padding: 20px; padding: auto;">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                      <div class="col"><h4><i class="bi bi-geo-alt-fill me-2"></i>Door-Step Service.</h4></div>
-                      <div class="col"><h4><i class="bi bi-truck me-2"></i>Free Pickup.</h4></div>
-                      <div class="col"><h4><i class="bi bi-clock-history me-2"></i></i>Ontime Delivery.</h4></div>
-                      <div class="col"><h4><i class="bi bi-shield-fill-check me-2"></i>Safe & Secure</h4></div>
+                <!-- Service Cards -->
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/crt tv.jpg" alt="CRT TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    CRT TV</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">Cathode Ray Tube Television</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                        <div class="col"><h4><i class="bi bi-cash me-2"></i><i class="bi bi-chevron-double-down me-2"></i>Affordable Price</h4></div>
-                        <div class="col"> <h4><i class="bi bi-eye-slash-fill"></i>No Hidden Charges.</h4></div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/led tv.jpeg" alt="LED TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    LED TV</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">Light Emitting Diode TV</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <br>
-                <!--grid end-->
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/crt tv.jpg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">CRT TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Cathode Ray Tube Television (All brands)</a>
-                                    </div>
-                                </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/lcd tv.jpeg" alt="LCD TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    LCD TV</div>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/led tv.jpeg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">LED TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Light Emitting Diodes Television (All brands)</a>
-                                    </div>
-                                </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">Liquid Crystal Display TV</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/lcd tv.jpeg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">LCD TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Liquid crystal display Television (All brands)</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <!-- Additional cards for OLED, Smart TV, QLED -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/oled tv.jpg"
+                                        alt="OLED TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    OLED TV</div>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/oled tv.jpg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">OLED TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Organic light-emitting diode Television (All brands)</a>
-                                    </div>
-                                </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">OLED Television</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/smart tv.jpg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">SMART TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Android and Smart Television (All brands)</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/smart tv.jpg"
+                                        alt="Smart TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    SMART TV</div>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="#Contact"><img class="img-fluid" src="img/qled tv.jpeg" width="295px" height="295px" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">QLED TV</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">All Services</h5>
-                                        <a class="d-block h5 mb-2" href="#Contact">Quantum Dot Light Emitting Diode Television (All brands)</a>
-                                    </div>
-                                </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">Android & Smart TV</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href="#Contact"><img class="img-fluid" src="img/qled tv.jpeg"
+                                        alt="QLED TV Repair"></a>
+                                <div
+                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    QLED TV</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">Repair Service</h5>
+                                <a class="d-block h5 mb-2" href="#Contact">QLED Television</a>
+                                <p class="text-muted"><i class="fa fa-check text-primary me-2"></i>All Brands</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Property List End -->
-    
+        <!-- Services Section End -->
+
         <!-- Call to Action Start -->
         <div class="container-xxl py-5" id="Contact">
             <div class="container">
@@ -255,79 +294,34 @@
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="owl-carousel header-carousel">
                                     <div class="owl-carousel-item">
-                                        <img class="img-fluid rounded w-100" src="img/guru photo.jpg" width="200px" height="100px" alt="">
+                                        <img class="img-fluid rounded w-100" src="img/guru photo.jpg" width="200px"
+                                            height="100px" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="mb-4">
                                     <h1 class="mb-3">Contact With Our Certified technician</h1>
-                                    <h2>Service Hours</h2> 
+                                    <h2>Service Hours</h2>
                                     <h3>Monday to Friday - 9AM to 9PM</h3>
                                 </div>
-                                <a href="https://wa.me/919159247835" class="btn btn-primary py-3 px-4 me-2"><img width="30" height="30" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>Chat with Whatsapp</a><br><br>
-                                <a href="mailto:rguruathan2003@gmail.com" class="btn btn-primary py-3 px-4 me-2"><img width="30" height="30" src="https://img.icons8.com/color/48/gmail-new.png" alt="gmail-new"/></i>Chat with gmail</a><br><br>
-                                <a href="tel:+919159247835" class="btn btn-primary py-3 px-4 me-2"><img width="30" height="30" src="https://img.icons8.com/color/48/apple-phone.png" alt="apple-phone"/>MAKE A CALL</a><br><br>
-                                <a onclick="appoinmentfoem()" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a><p></p>
 
-                                <div class="appoinment" id="appoinmentoder" style="display: none;" >
-                                
-                                    <form action="https://sheetdb.io/api/v1/xa7vj6uk2ngyj" method="post" name="my_form" id="sheetdb-form">
 
-                                        <div class="mb-3">
-                                          <label for="clindname" class="form-label">Name</label>
-                                          <input type="text" class="form-control" id="clindname" name="data[name]" required>
-                                        </div>
 
-                                        <select class="form-select" aria-label="Default select example" name="data[tvname]" required>
-                                            <option selected value="">select your TV</option>
-                                            <option value="LED TV">LED TV</option>
-                                            <option value="LCD TV">LCD TV</option>
-                                            <option value="CRT TV">CRT TV</option>
-                                            <option value="OLED TV">OLED TV</option>
-                                            <option value="QLED TV">QLED TV</option>
-                                            <option value="SMART TV">SMART TV</option>
-                                            <option value="OTHERS">OTHERS</option>
-                                        </select>
+                                <a href="https://wa.me/919159247835" class="btn btn-primary py-3 px-4 me-2"><img
+                                    width="30" height="30" src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                                    alt="whatsapp--v1" /> Chat with Whatsapp</a><br><br>
 
-                                        <div class="mb-3">
-                                            <label for="clindnumber" class="form-label">Contact Number</label>
-                                            <input type="number" class="form-control" id="clindnumber" name="data[phone_number]" required>
-                                        </div>
+                                <a href="mailto:rguruathan2003@gmail.com" class="btn btn-primary py-3 px-4 me-2"><img
+                                    width="30" height="30" src="https://img.icons8.com/color/48/gmail-new.png"
+                                    alt="gmail-new" /></i> Chat with gmail</a><br><br>
 
-                                        <div class="mb-3">
-                                            <label for="clinddate" class="form-label">Appoinment Date</label>
-                                            <input type="date" class="form-control" id="clinddate" name="data[appoinment_date]" required>
-                                        </div>
+                                <a href="tel:+919159247835" class="btn btn-primary py-3 px-4 me-2"><img width="30"
+                                    height="30" src="https://img.icons8.com/color/48/apple-phone.png"
+                                    alt="apple-phone" /> MAKE A CALL</a><br><br>
 
-                                        <div class="mb-3" style="display: none;">
-                                            <label for="clinddate" class="form-label">toDate</label>
-                                            <input type="text" class="form-control" id="todate" name="data[date]" required>
-                                        </div>
-                                        <div class="mb-3" style="display: none;">
-                                            <label for="clinddate" class="form-label">Status</label>
-                                            <input type="text" class="form-control" id="todate" name="data[Status]" value="Pending" required>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="clindproblem" class="form-label">Problem</label>
-                                            <textarea class="form-control" id="clindproblem" rows="3" name="data[Problem]" ></textarea>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-
-                                        <button onclick="closeform()" type="button" class="btn-close" id="form-control" aria-label="Close"></button>
-
-                                    </form>
-                                    
-                                    
-
-                                </div>
-                                <script>
-
-                                    
-
-                                </script>
+                                <a href="/appoinment.html" class="btn btn-dark py-3 px-4"><i
+                                    class="fa fa-calendar-alt me-2"></i> Get Appoinment</a>
                             </div>
                         </div>
                     </div>
@@ -335,24 +329,24 @@
             </div>
         </div>
         <!-- Call to Action End -->
-
         <!--brands-->
-        
         <div class="container-xxl py-5" id="Contact">
             <div class="container">
                 <div class="bg-light rounded p-3">
                     <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
                         <div class="row g-5 align-items-center">
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <img class="img-fluid rounded w-100" src="img/logo.png" width="200px" height="100px" alt="">
+                                <img class="img-fluid rounded w-100" src="img/logo.png" width="200px" height="100px"
+                                    alt="">
                             </div>
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="mb-4">
                                     <h1 class="mb-3">Brands</h1>
-                                    <h2>We Deal All leading TV Brands</h2> 
+                                    <h2>We Deal All leading TV Brands</h2>
                                 </div>
                                 <!--braind logo-->
-                                <img src="img/Screenshot 2024-05-18 124845.png" width="550px" class="rounded mx-auto d-block img-fluid" alt="...">
+                                <img src="img/Screenshot 2024-05-18 124845.png" width="550px"
+                                    class="rounded mx-auto d-block img-fluid" alt="...">
                             </div>
                         </div>
                     </div>
@@ -375,36 +369,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- lofin model -->        
-        <div class="modal fade modal-dialog modal-dialog-centered modal-dialog-scrollable"id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Admin Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="loginid" class="form-label">User ID</label>
-                            <input type="email" class="form-control" id="loginid"  required >
-                        </div>
-                        <div class="mb-3">
-                            <label for="loginpassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginpassword" required >
-                        </div>
-                        <button type="button" onclick="adminlogin()" class="btn btn-primary">Submit</button>
-                    </form>
-                    <h3 id="vccoad" style="display: none;">Verification Code: <span id="vcotp">000 000</span> </h3>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
-        </div>
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

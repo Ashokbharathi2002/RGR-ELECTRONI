@@ -1,43 +1,4 @@
-// display current date
-var currentDate = new Date().toLocaleDateString('en-GB', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-});
-document.getElementById("currentDate").innerHTML = currentDate;
-// time
-var currentTime = new Date().toLocaleTimeString('en-GB', {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-});
-document.getElementById("currentTime").innerHTML = currentTime;
-// show ui 
-function appment(){
-    document.getElementById("appointment").style.display = "block";
-    document.getElementById("user").style.display = "none";
-    document.getElementById("showstaff").style.display = "none";
-    document.getElementById("showreport").style.display = "none";
-}
-function showuser(){
-    document.getElementById("user").style.display = "block";
-    document.getElementById("appointment").style.display = "none";
-    document.getElementById("showstaff").style.display = "none";
-    document.getElementById("showreport").style.display = "none";
-}
-function showstaff(){
-    document.getElementById("showstaff").style.display = "block";
-    document.getElementById("appointment").style.display = "none";
-    document.getElementById("user").style.display = "none";
-    document.getElementById("showreport").style.display = "none";
-}
-function sreport(){
-    document.getElementById("showreport").style.display = "block";
-    document.getElementById("appointment").style.display = "none";
-    document.getElementById("user").style.display = "none";
-    document.getElementById("showstaff").style.display = "none";   
-}
-
+// Dashboard API Interactions
 
 // get appoinment data
 function findappoinment(event){
