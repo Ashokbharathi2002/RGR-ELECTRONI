@@ -68,8 +68,8 @@ function login() {
             // console.log("Account Status:", active); // Debug log
 
             if (userId == validUserId && password == validPassword) {
-
-                alertbox.render({
+                if (active == "Active") {
+                    alertbox.render({
                         alertIcon: 'success',
                         title: 'Thank You!',
                         message: 'Login sucess.',
@@ -80,38 +80,16 @@ function login() {
                     setTimeout(() => {
                         window.location.href = "dashboard.html";
                     }, 2000);
-
-                // if (active == "Active") {
-                //     alertbox.render({
-                //         alertIcon: 'success',
-                //         title: 'Thank You!',
-                //         message: 'Login sucess.',
-                //         btnTitle: 'Ok',
-                //         border: true
-                //     });
-                //     // delay to dashboard
-                //     setTimeout(() => {
-                //         window.location.href = "dashboard.html";
-                //     }, 2000);
-                // }
-                // if (active == "Pending") {
-                //     alertbox.render({
-                //         alertIcon: 'error',
-                //         title: 'Thank You!',
-                //         message: 'Your account is not active. Please contact the administrator.',
-                //         btnTitle: 'Ok',
-                //         border: true
-                //     });
-                // }
-                // else if (active == "Inactive") {
-                //     alertbox.render({
-                //         alertIcon: 'error',
-                //         title: 'Thank You!',
-                //         message: 'Your account is inactive. Please contact the administrator.',
-                //         btnTitle: 'Ok',
-                //         border: true
-                //     });
-                // }
+                }
+                else{
+                    alertbox.render({
+                        alertIcon: 'error',
+                        title: 'Thank You!',
+                        message: 'Your account is not active. Please contact the administrator.',
+                        btnTitle: 'Ok',
+                        border: true
+                    });
+                }
             }
             else {
                 alertbox.render({
