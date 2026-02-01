@@ -13,7 +13,14 @@ function sendAppointmentData() {
 
     // validation
     if (cname === "" || cphone === "" || caddress === "" || ctvbrand === "" || ctvinches === "" || cdate === "") {
-      alert("Please fill in all required fields.");
+      // alert("Please fill in all required fields.");
+      alertbox.render({
+        alertIcon: 'error',
+        title: 'Error!',
+        message: 'Please fill in all required fields.',
+        btnTitle: 'Ok',
+        border: true
+      });
       return;
     }
 
